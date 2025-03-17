@@ -1,21 +1,13 @@
-### **Software Engineer Intern**  
-**January 2025 – June 2025 | ByteDance**  
-
-Worked on the development and optimization of large-scale recommendation systems, focusing on algorithm improvements and system efficiency enhancements. Contributed to real-time data processing pipelines and model optimization for personalized content delivery.
-
-#### Key Contributions:  
-- Developed and optimized recommendation algorithms to enhance user engagement and content relevance.  
-- Designed and implemented real-time data processing workflows to improve model inference efficiency.  
-- Conducted A/B testing and performance analysis to refine recommendation strategies based on user behavior data.  
+### **Commercial Information Intelligent Retrieval Platform Based on Knowledge Graphs**  
+**March 2021 – January 2022**  
+- Developed and deployed web crawlers to achieve large-scale collection and incremental updates of the required corpora (including news data) for the project.
+- Participated in designing the knowledge graph, utilizing the BERT model to identify and process entities and relationships within queries.
+- Successfully reproduced and built a knowledge graph-based Q&A model, completed model training and inference tasks, and seamlessly integrated the model services with the backend system.
+- Project Achievement: Awarded Third Prize in the Finals of the 15th “Win at CUHK Technology Park Cup” Innovation and Entrepreneurship Competition.
 
 ---
-
-### **软件工程师实习生**  
-**2025年1月 – 2025年6月 | 字节跳动**  
-
-负责大规模推荐系统的开发与优化，专注于算法改进和系统效率提升。参与实时数据处理管道的构建，并优化模型推理流程，以提升个性化内容推荐效果。
-
-#### 主要贡献:  
-- 研发并优化推荐算法，提高用户互动率和内容相关性。  
-- 设计并实现实时数据处理流程，提升模型推理的计算效率。  
-- 进行A/B测试与性能分析，基于用户行为数据优化推荐策略。
+### **Research on the Integration of Text and Graphs **
+**March 2024 – Present**
+- Explored the application of large models in text-attributed graphs, investigating their enhancement effects on node and edge attributes, and contributed multiple text-attributed graph datasets to the CS-TAG Benchmark (github.com/sktsherlock/TAG-Benchmark).
+- Analyzed the impact of newly added textual attributes processed by large models on the performance of dynamic graph models, evaluating their practical utility.
+- Currently researching the collaborative effects of multi-agent systems in simulated graph generation tasks, with a focus on the potential applications of large models in this domain.
