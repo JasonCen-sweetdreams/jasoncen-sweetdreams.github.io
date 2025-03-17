@@ -6,7 +6,7 @@
 - Project Achievement: Awarded Third Prize in the Finals of the 15th “Win at CUHK Technology Park Cup” Innovation and Entrepreneurship Competition.
 
 ---
-### **Research on the Integration of Text and Graphs **
+### **Research on the Integration of Text and Graphs**
 **March 2024 – Present**
 - Explored the application of large models in text-attributed graphs, investigating their enhancement effects on node and edge attributes, and contributed multiple text-attributed graph datasets to the CS-TAG Benchmark (github.com/sktsherlock/TAG-Benchmark).
 - Analyzed the impact of newly added textual attributes processed by large models on the performance of dynamic graph models, evaluating their practical utility.
