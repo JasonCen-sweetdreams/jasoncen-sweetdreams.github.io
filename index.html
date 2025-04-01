@@ -27,6 +27,11 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    
+    <!-- Code Block css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
     <!-- Bootstrap core JS-->
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
@@ -174,17 +179,23 @@
     </section> -->
     <!-- Publications  -->
 
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+    <!-- DAILY STUDY -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="daily-study">
         <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;DAILY STUDY</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-
+        <header>
+            <h2 id="daily-study-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;DAILY STUDY</h2>
+        </header>
+        <div class="main-body" id="daily-study-md">
+            <ul>
+            <li><a href="contents/daily study/Dynamic Programming.md" data-type="markdown">Dynamic Programming</a></li>
+            <!-- <li><a href="docs/latex_doc1.tex" data-type="latex">LaTeX 文档 1</a></li> -->
+            </ul>
+            <div id="dynamic-content"></div>
+        </div>
         </div>
     </section>
-    <!-- Publications  -->
+    <!-- DAILY STUDY  -->
+  
 
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
@@ -198,6 +209,69 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        marked.setOptions({
+          highlight: function(code, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+              return hljs.highlight(code, { language: lang }).value;
+            }
+            return hljs.highlightAuto(code).value;
+          }
+        });
+      </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // 选择 daily study 区域中的所有链接
+          const links = document.querySelectorAll("#daily-study-md a");
+      
+          links.forEach(link => {
+            link.addEventListener("click", function(e) {
+              e.preventDefault(); // 阻止默认跳转行为
+      
+              const url = this.getAttribute("href");
+              const fileType = this.getAttribute("data-type"); // 此处假设都是 markdown 文件
+      
+              const dynamicContent = document.getElementById("dynamic-content");
+      
+              // 如果当前已经加载且显示的是同一个链接的内容，则收起内容
+              if (dynamicContent.dataset.loadedUrl === url && dynamicContent.style.display !== "none") {
+                dynamicContent.style.display = "none"; // 隐藏内容区域
+                return;
+              }
+      
+              // 否则显示内容区域，并记录当前加载的链接
+              dynamicContent.style.display = "block";
+              dynamicContent.dataset.loadedUrl = url;
+      
+              // 使用 fetch 动态加载文件内容
+              fetch(url)
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error("网络响应错误");
+                  }
+                  return response.text();
+                })
+                .then(text => {
+                  // 根据文件类型进行处理
+                  if (fileType === "markdown") {
+                    // 使用 marked.js 将 Markdown 转换为 HTML
+                    dynamicContent.innerHTML = marked.parse(text);
+                    hljs.highlightAll();
+                  } else {
+                    dynamicContent.innerText = text;
+                  }
+                })
+                .catch(error => {
+                  console.error("加载文件失败:", error);
+                  dynamicContent.innerText = "加载失败，请稍后再试。";
+                });
+            });
+          });
+        });
+    </script>
+        
 
 </body>
 
