@@ -180,7 +180,7 @@
     <!-- Publications  -->
 
     <!-- DAILY STUDY -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="daily-study">
+    <!-- <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="daily-study">
         <div class="container px-5">
         <header>
             <h2 id="daily-study-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;DAILY STUDY</h2>
@@ -188,13 +188,52 @@
         <div class="main-body" id="daily-study-md">
             <ul>
             <li><a href="contents/daily study/Dynamic Programming.md" data-type="markdown">Dynamic Programming</a></li>
-            <!-- <li><a href="docs/latex_doc1.tex" data-type="latex">LaTeX 文档 1</a></li> -->
             </ul>
             <div id="dynamic-content"></div>
         </div>
         </div>
-    </section>
+    </section> -->
     <!-- DAILY STUDY  -->
+
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="daily-study">
+        <div class="container px-5">
+        <header>
+            <h2 id="daily-study-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;DAILY STUDY</h2>
+        </header>
+        <div class="main-body" id="daily-study-md">
+            <ul>
+            <li><a href="viewer.html?doc=contents/daily study/Dynamic Programming.md" target="_blank">Dynamic Programming</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\单调栈和队列.md" target="_blank">单调栈和队列</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\二叉树.md" target="_blank">二叉树</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\滑动窗口.md" target="_blank">滑动窗口</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\回溯算法.md" target="_blank">回溯算法</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\数组.md" target="_blank">数组</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\双指针.md" target="_blank">双指针</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\贪心算法.md" target="_blank">贪心算法</a></li>
+            <li><a href="viewer.html?doc=contents\daily study\图论.md" target="_blank">图论</a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="issue">
+        <div class="container px-5">
+        <header>
+            <h2 id="daily-study-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;ISSUE</h2>
+        </header>
+        <div class="main-body" id="daily-study-md">
+            <ul>
+            <li><a href="viewer.html?doc=contents\issue\大规模并行问题.md" target="_blank">大规模并行问题</a></li>
+            <li><a href="viewer.html?doc=contents\issue\向量数据库写入数据时出现底层错误的问题.md" target="_blank">向量数据库异步写入数据</a></li>
+            <li><a href="viewer.html?doc=contents\issue\新agent编排下的token长度控制.md" target="_blank">生成token的长度控制</a></li>
+            <li><a href="viewer.html?doc=contents\issue\agent工具调用问题.md" target="_blank">agent工具调用</a></li>
+            <li><a href="viewer.html?doc=contents\issue\Message AgentScope.md" target="_blank">AgentScope Message</a></li>
+            <li><a href="viewer.html?doc=contents\issue\Social模拟耗时问题调查.mdd" target="_blank">模拟耗时问题</a></li>
+            <li><a href="viewer.html?doc=contents\issue\torch_geometric的CUDA上下文问题及解决.md" target="_blank">torch_geometric的CUDA上下文问题</a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
   
 
     <!-- Footer-->
@@ -221,7 +260,7 @@
         });
       </script>
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
           // 选择 daily study 区域中的所有链接
           const links = document.querySelectorAll("#daily-study-md a");
@@ -235,13 +274,11 @@
       
               const dynamicContent = document.getElementById("dynamic-content");
       
-              // 如果当前已经加载且显示的是同一个链接的内容，则收起内容
               if (dynamicContent.dataset.loadedUrl === url && dynamicContent.style.display !== "none") {
                 dynamicContent.style.display = "none"; // 隐藏内容区域
                 return;
               }
       
-              // 否则显示内容区域，并记录当前加载的链接
               dynamicContent.style.display = "block";
               dynamicContent.dataset.loadedUrl = url;
       
@@ -254,7 +291,6 @@
                   return response.text();
                 })
                 .then(text => {
-                  // 根据文件类型进行处理
                   if (fileType === "markdown") {
                     // 使用 marked.js 将 Markdown 转换为 HTML
                     dynamicContent.innerHTML = marked.parse(text);
@@ -270,7 +306,7 @@
             });
           });
         });
-    </script>
+    </script> -->
         
 
 </body>
